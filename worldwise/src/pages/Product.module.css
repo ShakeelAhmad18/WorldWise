@@ -32,3 +32,42 @@
   .product section a {
     margin-top: 2rem;
   }
+
+  
+
+  @media screen and (max-width:480px){
+    .product {
+      margin: 2rem;
+      padding: 4rem 4rem;
+      background-color: var(--color-dark--1);
+      min-height: calc(100vh - 8rem);
+    }
+    
+    .product section {
+      width: clamp(40rem, 60%, 50rem);
+      margin: 3rem auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    
+    .product img {
+      width: 100%;
+    }
+    
+    .product h2 {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+    
+    .product p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .product section a {
+      margin-top: 1rem;
+    }
+  }
