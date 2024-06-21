@@ -3,13 +3,16 @@ import PropTypes from 'prop-types'
 import Spinner from './Spinner'
 import Message from './Message'
 import CountryItem from './CountryItem'
+import { useContext } from 'react'
+import { CitieContext } from '../context/CitiesContext'
 
 CountryList.propTypes={
     cities:PropTypes.array,
     isLoading:PropTypes.bool
 }
 
-function CountryList({cities,isLoading}) {
+function CountryList() {
+    const {cities,isLoading}=useContext(CitieContext)
 
     if(isLoading) return <Spinner/>
 

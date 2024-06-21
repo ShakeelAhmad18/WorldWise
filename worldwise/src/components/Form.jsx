@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import styles from './Form.module.css'
+import Button from './Button';
+import { useNavigate } from 'react-router-dom';
 
 
 export function convertToEmoji(countryCode){
@@ -10,7 +12,7 @@ export function convertToEmoji(countryCode){
 
 
 function Form() {
-
+    const nevigate=useNavigate()
     const [cityName,setCityName]=useState('')
     const [date,setDate]=useState(new Date())
     const [notes,setNotes]=useState('')
@@ -35,9 +37,11 @@ function Form() {
                  <textarea  id="notes" value={notes} onChange={(e)=>setNotes(e.target.value)}></textarea>
             </div>
 
-            <div className={styles.button}>
-                <button>Add</button>
-                <button>&larr; Back</button>
+            <div className={styles.buttons}>
+                <Button type='primary'>Add</Button>
+                <Button type='back' onClick={(e)=>{
+                      e.preventDefault();
+                    nevigate(-1)}}>&larr; Back</Button>
             </div>
         </form>
     )

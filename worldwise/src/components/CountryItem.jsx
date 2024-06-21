@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 
     
 CountryItem.propTypes={
-    country:PropTypes.array
+    country:PropTypes.object
 }
 
 function CountryItem({country}) {
