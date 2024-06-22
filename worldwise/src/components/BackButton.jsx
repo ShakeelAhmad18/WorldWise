@@ -5,7 +5,7 @@ function BackButton() {
     const nevigate=useNavigate()
     return (
         <button>
-            <Button type="back" onClick={(e)=>{
+            <Button type='back' onClick={(e)=>{
                       e.preventDefault();
                     nevigate(-1)}}>&larr; Back</Button>
         </button>
