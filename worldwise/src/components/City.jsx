@@ -15,8 +15,7 @@ const formatDate=(date)=>new Intl.DateTimeFormat("en",{
 function City() {
   const {id}= useParams()
   const {getCity,currentCity}=useContext(CitieContext)
-  
-  //if(id === currentCity.id){ return <Spinner/>}
+
 
   useEffect(
     function(){
@@ -26,6 +25,8 @@ function City() {
   },[id])
 
     const {cityName,emoji,date,notes}=currentCity;
+
+    //if(id === currentCity.id){ return <Spinner/>}
     return (
         <div className={styles.city}>
             <div className={styles.row}>
