@@ -8,3 +8,5 @@ function SpinnerFullPage() {
     </div>
   );
 }
+
+export default SpinnerFullPage;

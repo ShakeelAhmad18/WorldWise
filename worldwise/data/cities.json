@@ -35,6 +35,30 @@
         "lat": "30.334953881988564",
         "lng": "72.07031250000001"
       }
+    },
+    {
+      "id": "3404",
+      "cityName": "Ahmadpur East",
+      "country": "Pakistan",
+      "emoji": "🇵🇰",
+      "date": "2024-06-22T16:03:12.061Z",
+      "notes": "yes",
+      "position": {
+        "lat": "29.305561325527698",
+        "lng": "71.10351562500001"
+      }
+    },
+    {
+      "id": "419d",
+      "cityName": "Surobi",
+      "country": "Afghanistan",
+      "emoji": "🇦🇫",
+      "date": "2024-06-22T16:03:32.306Z",
+      "notes": "supecious",
+      "position": {
+        "lat": "34.56085936708384",
+        "lng": "69.56542968750001"
+      }
     }
   ]
 }

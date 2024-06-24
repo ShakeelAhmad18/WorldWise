@@ -1,4 +1,4 @@
-import { createContext,useEffect, useReducer } from "react";
+import { createContext,useCallback,useEffect, useReducer } from "react";
 import PropTypes from "prop-types";
 
 const inialState={
@@ -52,7 +52,7 @@ const inialState={
 }
 
 const CitieContext = createContext();
-const BASE_URL = "http://localhost:3000";
+const BASE_URL = "http://localhost:8000";
 
 
 
@@ -87,7 +87,9 @@ function CitiesProvider({children}) {
 
 //fetch the Current City
 
- async function getCity(id){
+ 
+
+const getCity=useCallback( async function getCity(id){
 
    if(Number(id) === currentCity.id) return;
 
@@ -100,7 +102,7 @@ function CitiesProvider({children}) {
         dispatch({type:'rejected',payload:"there was an error while Loading the Data"});
       }
 
-  }
+  },[currentCity.id])
 
 
 
